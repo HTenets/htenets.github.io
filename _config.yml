@@ -100,7 +100,7 @@ theme_mode: # [light | dark]
 cdn: 
 
 # 侧边栏上的头像，支持本地或 CORS 资源
-avatar: "/commons/avatar.jpg"
+avatar: "/assets/img/favicons/favicon.svg"
 
 # 网站社交预览图片的 URL，用于 SEO `og:image` 元标签。
 # 可以在前台定义的 `page.image` 中覆盖。
