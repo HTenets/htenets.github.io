@@ -21,13 +21,13 @@ script_includes:
     {% endif %}
 
     <div class="post-meta text-muted">
-      <!-- published date -->
+      <!-- 发布日期 -->
       <span>
         {{ site.data.locales[lang].post.posted }}
         {% include datetime.html date=page.date tooltip=true lang=lang %}
       </span>
 
-      <!-- lastmod date -->
+      <!-- 最后修改日期 -->
       {% if page.last_modified_at and page.last_modified_at != page.date %}
         <span>
           {{ site.data.locales[lang].post.updated }}
@@ -53,7 +53,7 @@ script_includes:
       {% endif %}
 
       <div class="d-flex justify-content-between">
-        <!-- author(s) -->
+        <!-- 作者 -->
         <span>
           {% if page.author %}
             {% assign authors = page.author %}
@@ -80,7 +80,7 @@ script_includes:
         </span>
 
         <div>
-          <!-- pageviews -->
+          <!-- 页面浏览量 -->
           {% if site.pageviews.provider and site.analytics[site.pageviews.provider].id %}
             <span>
               <em id="pageviews">
@@ -90,7 +90,7 @@ script_includes:
             </span>
           {% endif %}
 
-          <!-- read time -->
+          <!-- 阅读时间 -->
           {% include read-time.html content=content prompt=true lang=lang %}
         </div>
       </div>
@@ -127,7 +127,7 @@ script_includes:
 
   <div class="post-tail-wrapper text-muted">
     <div class="d-flex justify-content-between align-items-center gap-3 mb-3">
-      <!-- categories -->
+      <!-- 分类 -->
       {% if page.categories.size > 0 %}
         <div class="post-meta">
           <i class="far fa-folder-open fa-fw me-1"></i>
@@ -138,11 +138,11 @@ script_includes:
         </div>
       {% endif %}
 
-      <!-- "Edit this post" link -->
+      <!-- "编辑此文章"链接 -->
       {% include post-edit.html lang=lang %}
     </div>
 
-    <!-- tags -->
+    <!-- 标签 -->
     {% if page.tags.size > 0 %}
       <div class="post-tags">
         <i class="fa fa-tags fa-fw me-1"></i>
